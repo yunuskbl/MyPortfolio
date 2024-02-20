@@ -5,7 +5,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: '../app.component.css',
+  styleUrl: 'navbar.component.css',
 })
 export class NavbarComponent {
   @ViewChild('menu-icon') menuIcon!: ElementRef;

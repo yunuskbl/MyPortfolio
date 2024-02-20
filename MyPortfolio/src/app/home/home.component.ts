@@ -5,6 +5,15 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './home.component.html',
-  styleUrl: '../app.component.css',
+  styleUrl: 'home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  var typed = new Typed(".multiple-text", {
+    strings: ["Back-End Developer."],
+
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1500,
+    loop: true,
+  });
+}
