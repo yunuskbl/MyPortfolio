@@ -24,6 +24,4 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
   ],
 })
-export class AppComponent {
-  title = 'Yunus Emre Kobal';
-}
+export class AppComponent {}
