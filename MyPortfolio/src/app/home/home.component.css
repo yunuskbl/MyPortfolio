@@ -8,7 +8,7 @@
   padding: 70px 10% 0;
 }
 .home-content {
-  max-width: 800px;
+  width: 800px;
 }
 
 .home-content h3 {
@@ -49,8 +49,8 @@ span {
 .home-img img {
   position: relative;
   display: flex;
-  max-width: 80%;
-  margin: auto;
+  width: 100%;
+  margin-right: 100px;
   opacity: 0;
   animation: zoomIn 1.5s ease forwards, skySpace 4s ease-in-out infinite;
   animation-delay: 2s, 3.5s;

@@ -9,9 +9,8 @@
     </p> -->
 
     <div class="social-media">
-      <a href="#" style="--i: 7"><i class="bx bxl-instagram"></i></a>
-      <a href="#" style="--i: 8"><i class="bx bxl-github"></i></a>
-      <a href="#" style="--i: 9"><i class="bx bxl-linkedin-square"></i></a>
+      @for (item of links; track item.id) {
+      <a href="{{ item.routes }}"><i class="{{ item.class }}"></i></a>}
     </div>
     <button class="btn" onclick="downloadPDF()">Download CV</button>
   </div>
