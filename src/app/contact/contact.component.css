@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@100&display=swap");
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+.contact .heading {
+  color: var(--main-color);
+  font-size: 5.2rem;
+}
+.contact {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -17,6 +34,10 @@
   background-color: var(--second-bg-color);
   border-radius: 0.8rem;
   margin: 0.7rem 0.2rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
 }
 
 .contact form .input-box input {
@@ -28,6 +49,26 @@
 .contact form .btn {
   margin-top: 2rem;
   cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 40px;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.8s;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: none;
 }
 
 @media (max-width: 991px) {

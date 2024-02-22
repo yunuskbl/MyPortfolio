@@ -1,3 +1,15 @@
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+.skills {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 .skills h2 {
   margin-bottom: 5rem;
 }
@@ -9,7 +21,14 @@
   flex-wrap: wrap;
   gap: 2rem;
 }
-
+.skills .heading {
+  color: var(--main-color);
+  font-size: 5.2rem;
+}
+.skills-box {
+  flex: 1;
+  margin-bottom: 20px;
+}
 .skills-container .skills-box {
   flex: 4 4 40rem;
   background: var(--second-bg-color);
@@ -36,6 +55,26 @@
   margin: 1rem 0 3rem;
 }
 
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 40px;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.8s;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: none;
+}
 @media (max-width: 991px) {
   .skills {
     padding-bottom: 7rem;

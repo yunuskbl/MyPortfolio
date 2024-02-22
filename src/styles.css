@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@100&display=swap");
 
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-}
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
@@ -31,81 +21,11 @@ section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
 }
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 8%;
-  background: var(--bg-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-.header.sticky {
-  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-.logo {
-  font-size: 2.5rem;
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 600;
-  cursor: default;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-}
 
 #menu-icon {
   font-size: 3.6rem;
   color: var(--text-color);
   display: none;
-}
-
-.social-media a {
-  display: inline-flex;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: 0.2rem solid var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 2.6rem 2rem 0;
-  transition: 0.5s ease;
-  opacity: 0;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-.social-media a:hover {
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
-}
-.btn {
-  display: inline-block;
-  padding: 1.2rem 2.8rem;
-  background: var(--main-color);
-  border-radius: 40px;
-  box-shadow: 0 0 1rem var(--main-color);
-  font-size: 1.6rem;
-  color: var(--second-bg-color);
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 0.8s;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-.btn:hover {
-  box-shadow: none;
 }
 
 .heading {

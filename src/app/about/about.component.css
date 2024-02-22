@@ -1,12 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@100&display=swap");
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+span {
+  color: var(--main-color);
+  font-weight: 700;
+}
+.about .header {
+  color: var(--main-color);
+  font-size: 5.2rem;
+  animation: slideTop 1s ease forwards;
+}
+.about .header :nth-of-type(2) {
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: slideTop 2s ease forwards;
+  animation-delay: 0.7s;
+}
 .about {
-  display: flex;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
   background: var(--second-bg-color);
+  color: var(--text-color);
+}
+.about-image {
+  position: static;
+  display: flex;
+  width: 100%;
 }
 .about-image img {
-  width: 35vw;
+  display: flex;
+  width: 40rem;
+  border-radius: 50%;
 }
 .about-content h2 {
   text-align: left;
@@ -20,6 +53,37 @@
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 40px;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.8s;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: none;
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 @media (max-width: 768px) {
   .about {

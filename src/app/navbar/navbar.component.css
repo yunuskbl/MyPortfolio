@@ -1,4 +1,41 @@
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+.logo {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 8%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 0.4rem solid var(--bg-color);
+  box-shadow: rgba(10, 10, 10, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
 .navbar a {
+  font-family: "Poppins", sans-serif;
   display: inline-block;
   font-size: 1.6rem;
   color: aliceblue;

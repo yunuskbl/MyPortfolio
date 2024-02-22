@@ -1,45 +1,16 @@
 <section class="skills" id="skills">
   <h2 class="heading"><span>Beceriler</span></h2>
   <div class="skills-container">
+    @for(item of skilbox; track item.id){
     <div class="skills-box">
-      <i class="bx bx-code-alt"></i>
-      <h3>Web Development</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni atque
-        maxime eum error, totam impedit quasi, nemo, vel facere fuga deleniti
-        nobis illo similique ex.
-      </p>
-      <a href="#" class="btn">Read More</a>
+      <i class="{{ item.i }}"></i>
+      <h3>{{ item.header }}</h3>
+      <p>{{ item.showMore ? item.content : shortText }}</p>
+      @if (!item.showMore) {<a class="btn" (click)="toggleShowMore(item)">{{
+        buttonText
+      }}</a
+      >} @else{<a class="btn" (click)="toggleShowMore(item)">Daha Az Gör</a>}
     </div>
-    <div class="skills-box">
-      <i class="bx bx-desktop"></i>
-      <h3>Desktop App</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni atque
-        maxime eum error, totam impedit quasi, nemo, vel facere fuga deleniti
-        nobis illo similique ex.
-      </p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-    <div class="skills-box">
-      <i class="bx bx-brush"></i>
-      <h3>Graphic Design</h3>
-      <p>
-        Photoshop,Illustrator programların hakimi ve kendimi geliştirmekten
-        kaçınmadığım bir alan. After Effect ise başlangıç seviyesinde
-        kullanabiliyorum
-      </p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-    <div class="skills-box">
-      <i class="bx bx-line-chart"></i>
-      <h3>Digital Marketing</h3>
-      <p>
-        Bu konuyla ilgili araştırmalarda bulundum ve Google Sertifikasına
-        sahibim. Kısaca yaptığımız her işin bir alıcısı vardır sadece bunu doğru
-        yollarla dijital dünyaya ulaştırmak.
-      </p>
-      <a href="#" class="btn">Read More</a>
-    </div>
+    }
   </div>
 </section>

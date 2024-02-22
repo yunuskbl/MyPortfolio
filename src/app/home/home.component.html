@@ -3,16 +3,17 @@
     <h3>Merhaba Ben</h3>
     <h1>Yunus</h1>
     <h3><span class="multiple-text"></span></h3>
-    <!-- <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-      modi?
-    </p> -->
+
+    <p>Yeni projeler üzerinde çalışmaya devam ediyorum.</p>
 
     <div class="social-media">
       @for (item of links; track item.id) {
-      <a href="{{ item.routes }}"><i class="{{ item.class }}"></i></a>}
+      <a href="{{ item.routes }}" target="_blank"
+        ><i class="{{ item.i }}"></i></a
+      >}
     </div>
-    <button class="btn" onclick="downloadPDF()">Download CV</button>
+
+    <button class="btn" (click)="downloadCV()">Download CV</button>
   </div>
 
   <div class="home-img">
