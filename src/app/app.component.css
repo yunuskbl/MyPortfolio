@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@100&display=swap");
+
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
 }
-
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
 body {
   background: var(--bg-color);
   color: var(--text-color);

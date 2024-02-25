@@ -2,41 +2,19 @@
   <h2 class="heading"><span>Projelerim</span></h2>
 
   <div class="projects-container">
+    @for (item of projectBox; track item.id) {
     <div class="projects-box">
-      <img src="../assets/img/projects4.jpg" alt="" />
+      <img src="{{ item.img }}" />
       <div class="projects-layer">
-        <h4>Web Design</h4>
+        <h4>{{ item.header }}</h4>
         <p>
-          4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nam!
+          {{ item.content }}
         </p>
-        <a href="#">
+        <a target="_blank" href="{{ item.link }}">
           <i class="bi bi-link"></i>
         </a>
       </div>
     </div>
-    <div class="projects-box">
-      <img src="../assets/img/projects3.jpg" alt="" />
-      <div class="projects-layer">
-        <h4>Web Design</h4>
-        <p>
-          5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nam!
-        </p>
-        <a href="#">
-          <i class="bi bi-link"></i>
-        </a>
-      </div>
-    </div>
-    <div class="projects-box">
-      <img src="../assets/img/projects.jpg" alt="" />
-      <div class="projects-layer">
-        <h4>Web Design</h4>
-        <p>
-          6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, nam!
-        </p>
-        <a href="#">
-          <i class="bi bi-link"></i>
-        </a>
-      </div>
-    </div>
+    }
   </div>
 </section>

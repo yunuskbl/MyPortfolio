@@ -4,6 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TextService {
+  projectsText1 = `Patika.dev Javascript kampında yapmış olduğum
+   Asian Kitchen Menü isimli çalışmam.`;
+  projectsText2 = `C# kullanarak ve SQL,Crystal Report ile desteklediğim raporlama
+   işlemlerini konu alan masaüstü proje çalışmam.`;
+  projectsText3 = `Engin Demiroğ'un eğitim paketiyle eş zamanlı olarak geliştirmiş olduğum
+    kapsamlı bir kurumsal mimari içeren Back-End projem. `;
   webApp = `Angular, TypeScript, JavaScript, HTML ve CSS konularında geniş bir
     bilgi birikimine sahibim ve birçok projede aktif olarak çalıştım. Web geliştirme
     konusunda tutkulu ve deneyimli bir geliştiriciyim ve çeşitli teknolojileri etkin

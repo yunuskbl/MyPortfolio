@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { TextService } from '../../textService/text-service.service';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { TextService } from '../services/textService/text-service.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,10 +8,8 @@ import { TextService } from '../../textService/text-service.service';
   templateUrl: './skills.component.html',
   styleUrl: 'skills.component.css',
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements AfterViewInit {
   buttonText: string = 'Devamını Oku';
-  fullText: string | any;
-  shortText: string | any;
   constructor(private textService: TextService) {}
 
   skilbox = [
@@ -21,6 +19,8 @@ export class SkillsComponent implements OnInit {
       i: 'bi bi-braces',
       content: this.textService.webApp,
       showMore: false,
+      shortText: '',
+      fullText: '',
     },
     {
       id: 2,
@@ -28,6 +28,8 @@ export class SkillsComponent implements OnInit {
       i: 'bi bi-display',
       content: this.textService.desktopText,
       showMore: false,
+      shortText: '',
+      fullText: '',
     },
     {
       id: 3,
@@ -35,6 +37,8 @@ export class SkillsComponent implements OnInit {
       i: 'bi bi-brush',
       content: this.textService.designText,
       showMore: false,
+      shortText: '',
+      fullText: '',
     },
     {
       id: 4,
@@ -42,13 +46,15 @@ export class SkillsComponent implements OnInit {
       i: 'bi bi-graph-up',
       content: this.textService.marktText,
       showMore: false,
+      shortText: '',
+      fullText: '',
     },
   ];
-  ngOnInit(): void {
-    const content = document.querySelector('p');
+  ngAfterViewInit(): void {
     this.skilbox.forEach((item) => {
-      this.fullText = item.content;
-      this.shortText = item.content.slice(0, item.content.indexOf('\n', 200));
+      item.fullText = item.content;
+      item.shortText =
+        item.content.slice(0, item.content.indexOf(' ', 200)) + ' ...';
     });
   }
   toggleShowMore(skillBox: any) {

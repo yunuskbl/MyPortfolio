@@ -1,4 +1,4 @@
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 import Typed from 'typed.js';
@@ -30,7 +30,7 @@ export class HomeComponent implements AfterViewInit {
     },
   ];
   ngAfterViewInit(): void {
-    const typed = new Typed('.multiple-text', {
+    new Typed('.multiple-text', {
       strings: ['Back-End Geliştirici'],
       loop: true,
       backSpeed: 100,

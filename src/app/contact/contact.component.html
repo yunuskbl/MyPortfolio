@@ -1,21 +1,42 @@
 <section class="contact" id="contact">
   <h2 class="heading"><span>İletişim</span></h2>
-  <form action="#">
+
+  <form action="#contact" method="post">
     <div class="input-box">
-      <input type="text" placeholder="İsim-Soyisim" />
-      <input type="email" placeholder="E-Mail Adres" />
+      <input
+        [(ngModel)]="name"
+        type="text"
+        name="name"
+        placeholder="İsim-Soyisim"
+      />
+      <input
+        [(ngModel)]="mail"
+        type="email"
+        name="mail"
+        placeholder="E-Mail Adres"
+      />
     </div>
     <div class="input-box">
-      <input type="tel" placeholder="Telefon No" />
-      <input type="text" placeholder="Konu" />
+      <input
+        [(ngModel)]="phone"
+        type="tel"
+        name="telefon"
+        placeholder="Telefon No"
+      />
+      <input [(ngModel)]="subject" type="text" name="konu" placeholder="Konu" />
     </div>
     <textarea
-      name=""
-      id=""
+      [(ngModel)]="body"
+      name="mesaj"
       cols="30"
       rows="10"
-      placeholder="Your Message"
+      placeholder="Mesajınız"
     ></textarea>
-    <input type="submit" value="Send Message" class="btn" />
+    <input
+      type="submit"
+      value="Send Message"
+      (click)="sendMail()"
+      class="btn"
+    />
   </form>
 </section>

@@ -7,7 +7,6 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',

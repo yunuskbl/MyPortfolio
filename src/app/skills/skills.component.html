@@ -5,7 +5,7 @@
     <div class="skills-box">
       <i class="{{ item.i }}"></i>
       <h3>{{ item.header }}</h3>
-      <p>{{ item.showMore ? item.content : shortText }}</p>
+      <p>{{ item.showMore ? item.fullText : item.shortText }}</p>
       @if (!item.showMore) {<a class="btn" (click)="toggleShowMore(item)">{{
         buttonText
       }}</a

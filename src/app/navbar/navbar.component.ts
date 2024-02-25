@@ -18,7 +18,6 @@ export class NavbarComponent {
     { id: '5', link: 'İletişim', route: '#contact' },
   ];
 
-  getMenu() {}
   toggleMenu(index: number) {
     const navbarElements = document.querySelectorAll('.navbar a');
     navbarElements.forEach((link, i) => {
