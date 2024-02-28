@@ -4,8 +4,11 @@
   --text-color: #fff;
   --main-color: #0ef;
 }
-.skills {
+* {
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.skills {
   scroll-behavior: smooth;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -47,7 +50,7 @@
   color: var(--main-color);
 }
 .skills-box h3 {
-  font-size: 2.6rem;
+  font-size: 3rem;
 }
 
 .skills-box p {

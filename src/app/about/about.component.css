@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@100&display=swap");
-
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 span {
   color: var(--main-color);
@@ -22,7 +24,6 @@ span {
   animation-delay: 0.7s;
 }
 .about {
-  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   display: inline-flex;
   justify-content: center;
@@ -38,7 +39,7 @@ span {
 }
 .about-image img {
   display: flex;
-  width: 40rem;
+  width: 30rem;
   border-radius: 50%;
 }
 .about-content h2 {

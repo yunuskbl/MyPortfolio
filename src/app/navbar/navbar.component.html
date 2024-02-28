@@ -3,7 +3,7 @@
   <i #menuIcon class="bx bx-menu" id="menu-icon"></i>
   <nav class="navbar" #navbar>
     @for (links of menu; track links.id) {
-    <a href="{{ links.route }}" style="--i: 1">{{ links.link }}</a>
+    <a href="{{ links.route }}">{{ links.link }}</a>
     }
   </nav>
 </header>

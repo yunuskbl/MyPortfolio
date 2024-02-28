@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-
-import Typed from 'typed.js';
+import { AfterViewInit, Component, OnInit, Type } from '@angular/core';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [NgxTypedJsModule],
   templateUrl: './home.component.html',
   styleUrl: 'home.component.css',
 })
-export class HomeComponent implements AfterViewInit {
-  constructor(private client: HttpClient) {}
+export class HomeComponent {
+  constructor() {}
+
+  downloadcv = '../assets/cv/yunusKobalCV.pdf';
   links = [
     {
       id: 1,
@@ -29,25 +30,4 @@ export class HomeComponent implements AfterViewInit {
       i: 'bi bi-linkedin',
     },
   ];
-  ngAfterViewInit(): void {
-    new Typed('.multiple-text', {
-      strings: ['Back-End Geliştirici'],
-      loop: true,
-      backSpeed: 100,
-      backDelay: 1500,
-      typeSpeed: 100,
-    });
-  }
-  downloadCV() {
-    const cvUrl = '../assets/cv/yunusKobalCV.pdf';
-    this.client
-      .get(cvUrl, { responseType: 'blob' })
-      .subscribe((response: any) => {
-        const blob = new Blob([response], { type: response.type });
-        const downloadLink = document.createElement('a');
-        downloadLink.href = window.URL.createObjectURL(blob);
-        downloadLink.download = 'yunusKobalCV';
-        downloadLink.click();
-      });
-  }
 }

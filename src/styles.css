@@ -1,8 +1,16 @@
+@import "../node_modules/ngx-toastr/toastr.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 html {

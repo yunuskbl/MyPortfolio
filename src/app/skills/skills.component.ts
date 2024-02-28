@@ -8,9 +8,11 @@ import { TextService } from '../services/textService/text-service.service';
   templateUrl: './skills.component.html',
   styleUrl: 'skills.component.css',
 })
-export class SkillsComponent implements AfterViewInit {
+export class SkillsComponent {
   buttonText: string = 'Devamını Oku';
-  constructor(private textService: TextService) {}
+  constructor(private textService: TextService) {
+    this.ShortText();
+  }
 
   skilbox = [
     {
@@ -50,7 +52,8 @@ export class SkillsComponent implements AfterViewInit {
       fullText: '',
     },
   ];
-  ngAfterViewInit(): void {
+
+  ShortText() {
     this.skilbox.forEach((item) => {
       item.fullText = item.content;
       item.shortText =
